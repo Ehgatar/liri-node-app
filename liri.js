@@ -2,7 +2,8 @@
 require("dotenv").config();
 //Loading modules
 var Twitter = require('twitter');
-var spotify = require('spotify');
+var Spotify = require('node-spotify-api');
+
 var request = require('request');
 var fs = require('fs');
 var keys = require("./keys.js");
@@ -24,7 +25,10 @@ var client = new Twitter({
   access_token_secret: twitterKeys.access_token_secret
 });
 
-
+var spotify = new Spotify({
+	id: keys.spotify.id,
+	secret: keys.spotify.secret
+  });
 
 //-----------------------FUNCTIONS-----------------------------------------------
 
@@ -60,7 +64,7 @@ function processCommands(command, commandParam){
 
 function getMyTweets(){
 
-	var params = {screen_name: 'BootcampLiribapp', count: 20, exclude_replies:true, trim_user:true};
+	var params = {screen_name: 'BootcampLiri', count: 20, exclude_replies:true, trim_user:true};
 		client.get('statuses/user_timeline', params, function(error, tweets, response) {
 				if (!error) {
 					//console.log(tweets);
