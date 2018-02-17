@@ -7,10 +7,10 @@ exports.twitterKeys = {
   access_token_secret: 'eSQZGrd2Z2GR1EEPysjX3n4B8DU3Je8h5NZc8biCxlC1b',
 };
 
-var spotify = new Spotify(keys.spotify);
-var client = new Twitter(keys.twitter);
+// var spotify = new Spotify(keys.spotify);
+// var client = new Twitter(keys.twitter);
 
-exports.spotify = {
-  id: process.env.SPOTIFY_ID,
-  secret: process.env.SPOTIFY_SECRET
-};
+// exports.spotify = {
+//   id: process.env.e255262c69e54491940c6eec1a3141e1,
+//   secret: process.env.28b00a31ce0947c3bab6a1f91ca26c3c,
+// };

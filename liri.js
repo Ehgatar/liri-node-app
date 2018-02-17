@@ -60,7 +60,7 @@ function processCommands(command, commandParam){
 
 function getMyTweets(){
 
-	var params = {screen_name: 'jincygeorge8388', count: 20, exclude_replies:true, trim_user:true};
+	var params = {screen_name: 'BootcampLiribapp', count: 20, exclude_replies:true, trim_user:true};
 		client.get('statuses/user_timeline', params, function(error, tweets, response) {
 				if (!error) {
 					//console.log(tweets);
